@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .calculator {
+            background-color: #ffffff;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+            animation: floatAnimation 4s ease-in-out infinite;
+        }
+        @keyframes floatAnimation {
+            0%, 100% {
+                transform: translateY(-5px);
+            }
+            50% {
+                transform: translateY(5px);
+            }
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: calc(100% - 22px);
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            animation: floatAnimation 4s ease-in-out infinite;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .result pre {
+            background: #f9f9f9;
+            color: #333;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        @media screen and (max-width: 600px) {
+            .calculator {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h2>Kalkulator Permutasi</h2>
+            <form action="/hitung_permutasi" method="post">
+                <label for="n">Jumlah elemen (n):</label>
+                <input type="number" id="n" name="n" required>
+                <label for="r">Elemen yang diambil (r):</label>
+                <input type="number" id="r" name="r" required>
+                <button type="submit">Hitung Permutasi</button>
+            </form>
+            <div class="result">
+                <h3>Hasil Permutasi:</h3>
+                <pre>...</pre>
+            </div>
+        </div>
+        <div class="calculator">
+            <h2>Kalkulator Faktorial</h2>
+            <form action="/hitung_faktorial" method="post">
+                <label for="number">Masukkan sebuah bilangan:</label>
+                <input type="number" id="number" name="number" required>
+                <button type="submit">Hitung Faktorial</button>
+            </form>
+            <div class="result">
+                <h3>Hasil Faktorial:</h3>
+                <pre>...</pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
